@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { DataService } from 'src/app/shared/services/data.service';
 
@@ -18,6 +18,7 @@ export class MatchesComponent implements OnInit {
     { name: 'MUTUAL MATCHES', id: 'mutual' }
   ]
   selected = 0;
+  footerHide!: boolean;
 
   constructor(
     private service: DataService, private spinner: NgxSpinnerService
@@ -29,6 +30,17 @@ export class MatchesComponent implements OnInit {
   }
   switchTab(type: string) {
     this.tabType = type;
+  }
+
+  @HostListener('window:scroll', ['$event.target']) // for window scroll events
+  scrollTop(event: any) {
+   const scrollBar = event.scrollingElement.scrollTop;
+   if(scrollBar > 200) {
+     this.footerHide = true;
+1   } else {
+     this.footerHide = false;
+   }
+
   }
 
   getProfileList() {

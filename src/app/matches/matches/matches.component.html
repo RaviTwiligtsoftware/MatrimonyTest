@@ -23,7 +23,7 @@
     <mat-tab-group class="headercolor" mat-align-tabs="center" *ngIf="tabType == 'regular'" [selectedIndex]="selected"
         (selectedIndexChange)="tabChange($event)">
         <mat-tab *ngFor="let tab of tabs" [label]="tab.name">
-            <app-regular-matches  [profileList]="currentTabData"></app-regular-matches>
+            <app-regular-matches [footerHide]="footerHide" [profileList]="currentTabData"></app-regular-matches>
         </mat-tab>
     </mat-tab-group>
     </div>

@@ -7,20 +7,32 @@ declare var $: any;
   styleUrls: ['./regular-matches.component.scss']
 })
 export class RegularMatchesComponent implements OnInit {
-  @Input() profileList: any[] = [];  
+  @Input() profileList: any[] = [];
+  _footerHide: any;
+
+  @Input()
+  set footerHide(res: any) {
+    this._footerHide = res;
+  }
+
+  get footerHide(): any {
+    return this._footerHide;
+  }
   imgCount = 50;
-  
+
   constructor() { }
 
   ngOnInit(): void {
-    $(window).scroll(() =>{
+    $(window).scroll(() => {
       if ($(this).scrollTop() > 300) {
-          $('.headercolor').addClass('scroll_page');
+        $('.headercolor').addClass('scroll_page');
+        console.log('the footer is givne as;');
       } else {
-          $('.headercolor').removeClass('scroll_page');
+        $('.headercolor').removeClass('scroll_page');
       }
     });
   }
+
 
 
 }
