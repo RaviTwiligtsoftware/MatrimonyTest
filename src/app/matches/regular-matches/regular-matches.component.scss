@@ -125,9 +125,10 @@ ul.share {
   font-size: 14px;
 }
 .footer li.active {
-  color: green;
+  color: #008000;
 }
 .footer {
+  z-index: 9;
   background: white;
   position: fixed;
   bottom: 0px;
@@ -162,10 +163,3 @@ button {
   }
 }
 
-.fixed-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 0 2rem;
-  transition: transform 0.3s ease-in-out; // Transition on hide/show.
-}
