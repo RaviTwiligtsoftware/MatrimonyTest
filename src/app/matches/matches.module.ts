@@ -34,6 +34,7 @@ import { MatchesRoutingModule } from './matches-routing.module';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    NgxHideOnScrollModule
   ]
 })
 export class MatchesModule { }

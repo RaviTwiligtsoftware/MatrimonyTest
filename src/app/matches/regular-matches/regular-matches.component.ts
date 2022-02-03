@@ -15,9 +15,9 @@ export class RegularMatchesComponent implements OnInit {
   ngOnInit(): void {
     $(window).scroll(() =>{
       if ($(this).scrollTop() > 300) {
-          $('.header_bg').addClass('scroll_page');
+          $('.headercolor').addClass('scroll_page');
       } else {
-          $('.header_bg').removeClass('scroll_page');
+          $('.headercolor').removeClass('scroll_page');
       }
     });
   }

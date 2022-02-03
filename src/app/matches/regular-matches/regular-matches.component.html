@@ -9,55 +9,47 @@
             </button>
         </div>
     </div>
-    <div class="card-wrapper shadow px-2 bg-white rounded" *ngFor="let item of profileList; index as i">
-        <div class="card-flex">
-            <div class="card_img">
-                <img class="ms-2 mt-3" src="https://picsum.photos/300/200/?random={{ i + imgCount}}"
-                    alt="Card image">
-            </div>
-            <div class="card-description ">
-                <div class="card_title">
-                    <ul>
-                        <li class="item_list">{{item.profileId}}</li>
-                        <li *ngIf="item.isPrimeUser" class="prime_list" >{{item.profileType}}
-                            <span>
-                                <mat-icon class="rotateIcon text-warning"> turned_in </mat-icon>
-                            </span>
-                        </li>
-                        <mat-icon class="float-end">more_vert</mat-icon>
-                    </ul>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of profileList; index as i">
+            <div class="cardWrapper shadow px-2 bg-white rounded">
+                <div class="card-flex">
+                    <div class="card_img">
+                        <img class="ms-2 mt-3" src="https://picsum.photos/300/200/?random={{ i + imgCount}}"
+                            alt="Card image">
+                    </div>
+                    <div class="card-description ">
+                        <div class="card_title">
+                            <ul>
+                                <li class="item_list">{{item.profileId}}</li>
+                                <li *ngIf="item.isPrimeUser" class="prime_list">{{item.profileType}}
+                                    <span>
+                                        <mat-icon class="rotateIcon text-warning"> turned_in </mat-icon>
+                                    </span>
+                                </li>
+                                <mat-icon class="float-end">more_vert</mat-icon>
+                            </ul>
+                        </div>
+                        <h3 class="card-title" id="blur">{{item.profileName}}</h3>
+                        <h5 class="card-text">{{item.age}} yrs, {{item.height}}", {{item.degree}}, {{item.caste}},
+                            {{item.city}}, {{item.state}}</h5>
+                    </div>
                 </div>
-                <h3 class="card-title" id="blur">{{item.profileName}}</h3>
-                <h5 class="card-text">{{item.age}} yrs, {{item.height}}", {{item.degree}}, {{item.caste}},
-                    {{item.city}}, {{item.state}}</h5>
+                <ul class="share d-flex justify-content-between mx-1">
+                    <span><img class="mb-1" src="../../../assets/images/skyBlueStar.png" alt="img" />
+                        <li>Shortlist</li>
+                    </span>
+                    <span><img src="../../../assets/images/comment.png" alt="img" />
+                        <li>2 Wks ago</li>
+                    </span>
+                    <span><img src="../../../assets/images/roundTick.png" alt="img" />
+                        <li>Send Interest</li>
+                    </span>
+                </ul>
+
             </div>
         </div>
-        <ul class="share d-flex justify-content-between mx-1">
-            <span><img class="mb-1" src="../../../assets/images/skyBlueStar.png" alt="img" />
-                <li>Shortlist</li>
-            </span>
-            <span><img src="../../../assets/images/comment.png" alt="img" />
-                <li>2 Wks ago</li>
-            </span>
-            <span><img src="../../../assets/images/roundTick.png" alt="img" />
-                <li>Send Interest</li>
-            </span>
-        </ul>
-        
     </div>
-    
-</div>
-<div>
-    <nav>
-        <a href="#page-1">1</a>
-        <a href="#page-2">2</a>
-        <a href="#page-3">3</a>
-      </nav>
-      <div class="scroll-container">
-        <div class="scroll-page" id="page-1">1</div>
-        <div class="scroll-page" id="page-2">2</div>
-        <div class="scroll-page" id="page-3">3</div>
-      </div>
+
 </div>
 
 <div class="footer">

@@ -1,4 +1,4 @@
-.bgprime {
+.primeBackground {
     background-color: #000000;
     background-image: linear-gradient(300deg, #000000 0%, #04619f 55%);
 }
@@ -44,7 +44,7 @@
     color: #292929;
     font-weight: 400;
 }
-.regular span {
+.prime_span {
     color: #8231d6;
     font-weight: 500;
 }
@@ -53,4 +53,13 @@
     content: url("../../../assets/images/star.png");
     position: absolute;
     left: 30px;
+}
+
+
+@media (min-width: 1400px){
+
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100%;
+    }
+
 }

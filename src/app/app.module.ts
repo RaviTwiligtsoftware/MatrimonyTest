@@ -7,6 +7,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    NgxHideOnScrollModule  
+    NgxHideOnScrollModule,
+    NgxSpinnerModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
