@@ -1,0 +1,29 @@
+<section class="main_sec">
+    <div [ngClass]="tabType == 'regular' ? 'header_bg':'header_bg_1'">
+        <div class="tabSet">
+            <button [ngClass]="tabType == 'regular' ? 'yesbutton_regular':'confirmbutton_regular'"
+                (click)="switchTab('regular')" mat-raised-button>Regular</button>
+            <button [ngClass]="tabType == 'prime' ? 'yesbutton_prime':'confirmbutton_prime'"
+                (click)="switchTab('prime')" mat-button>PRIME</button>
+        </div>
+        <div class="row mt-4" *ngIf="tabType == 'regular'">
+            <div class="col-6">
+                <h5 class="text-white font-size ms-3">MATCHES</h5>
+            </div>
+            <div class="col-6">
+                <div class="float-end">
+                    <mat-icon class="text-white me-3"> notifications </mat-icon>
+                    <mat-icon class="text-white me-3"> headset_mic </mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <mat-tab-group class="header_bg" mat-align-tabs="center" *ngIf="tabType == 'regular'" [selectedIndex]="selected"
+        (selectedIndexChange)="tabChange($event)">
+        <mat-tab *ngFor="let tab of tabs" [label]="tab.name">
+            <app-regular-matches  [profileList]="currentTabData"></app-regular-matches>
+        </mat-tab>
+    </mat-tab-group>
+    <app-prime-matches *ngIf="tabType == 'prime'"></app-prime-matches>
+</section>
