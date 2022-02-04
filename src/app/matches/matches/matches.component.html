@@ -1,12 +1,12 @@
 <section class="main_sec">
     <div [ngClass]="tabType == 'regular' ? 'headercolor':'header_bg_1'">
         <div class="tabSet">
-            <button [ngClass]="tabType == 'regular' ? 'yesbutton':'confirm'"
-                (click)="switchTab('regular')" mat-raised-button>Regular</button>
-            <button [ngClass]="tabType == 'prime' ? 'primeButton':'confirmbutton_prime'"
-                (click)="switchTab('prime')" mat-button>PRIME</button>
+            <button [ngClass]="tabType == 'regular' ? 'yesbutton':'confirm'" (click)="switchTab('regular')"
+                mat-raised-button>Regular</button>
+            <button [ngClass]="tabType == 'prime' ? 'primeButton':'confirmbutton_prime'" (click)="switchTab('prime')"
+                mat-button>PRIME</button>
         </div>
-        <div class="row mt-4" *ngIf="tabType == 'regular'">
+        <div class="row m-0 mt-4" *ngIf="tabType == 'regular'">
             <div class="col-6">
                 <h5 class="text-white font-size ms-3">MATCHES</h5>
             </div>
@@ -19,13 +19,13 @@
         </div>
     </div>
 
-    <div ngxHideOnScroll [classNameWhenHidden]="'nav--hidden'">
+
     <mat-tab-group class="headercolor" mat-align-tabs="center" *ngIf="tabType == 'regular'" [selectedIndex]="selected"
         (selectedIndexChange)="tabChange($event)">
         <mat-tab *ngFor="let tab of tabs" [label]="tab.name">
             <app-regular-matches [footerHide]="footerHide" [profileList]="currentTabData"></app-regular-matches>
         </mat-tab>
     </mat-tab-group>
-    </div>
+
     <app-prime-matches *ngIf="tabType == 'prime'"></app-prime-matches>
 </section>

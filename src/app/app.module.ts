@@ -21,7 +21,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MatButtonModule,
     HttpClientModule,
     NgxHideOnScrollModule,
-    NgxSpinnerModule  
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

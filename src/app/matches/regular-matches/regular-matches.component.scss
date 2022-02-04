@@ -29,6 +29,18 @@
   width: 80px;
   height: 80px;
 }
+.card_img1 {
+  width: 13%;
+  max-width: 120px;
+  margin-right: 20px;
+  position: relative;
+  z-index: 9;
+}
+.card_img1 img {
+  border-radius: 70px;
+  width: 80px;
+  height: 80px;
+}
 .headercolor mat-toolbar.mat-toolbar {
   background: transparent;
   overflow-y: auto;
@@ -162,4 +174,8 @@ button {
       display: initial;
   }
 }
-
+.filter_icon{
+  position: fixed;
+  z-index: 9;
+  top: 80%;
+}
