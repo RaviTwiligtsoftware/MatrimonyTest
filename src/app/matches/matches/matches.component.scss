@@ -88,7 +88,9 @@ body {
   .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
     background: #fff !important;
   }
+  .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+    display: none !important;
+  }
 }
-
 
 
